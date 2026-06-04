@@ -18,6 +18,50 @@
 
 ---
 
+## 🔄 Workflow Diagram
+
+Below is the high-level architecture of the user journeys for both Students and Recruiters on the platform.
+
+```mermaid
+flowchart TD
+    subgraph Student Journey
+        S1[Register / Login] --> S2[Complete Profile]
+        S2 --> S3[Browse Internships]
+        S3 --> S4[Apply for Role]
+        S4 --> S5[Track Application Status]
+        S5 -.-> |Interview Prep| S6[Practice Questions & Guides]
+    end
+
+    subgraph Recruiter Journey
+        R1[Register / Login] --> R2[Post New Internship]
+        R2 --> R3[View Kanban Dashboard]
+        R3 --> R4[Review Applications]
+        R4 --> R5[Update Application Stage]
+        R5 -.-> |Status Synced| S5
+    end
+```
+
+---
+
+## 🎯 MVP Definition
+
+The current version of InternBridge is scoped as a **Minimum Viable Product (MVP)** focusing on solving the core pain points of internship discovery and applicant tracking.
+
+**In Scope (MVP):**
+*   Dual-role authentication (Student & Recruiter).
+*   End-to-end job posting and application flow.
+*   Real-time applicant tracking via a Recruiter Kanban board.
+*   Basic student profile gamification (Internship Readiness Score).
+*   Static interview preparation resources.
+
+**Out of Scope (Future Versions):**
+*   In-app messaging or automated scheduling.
+*   Advanced AI-based resume parsing.
+*   Integration with external university portals (SSO).
+*   Comprehensive Admin analytics dashboard.
+
+---
+
 ## 📸 Platform Gallery
 
 Here is a look at the InternBridge platform in action:
